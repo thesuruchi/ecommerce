@@ -1,0 +1,87 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+.image{
+    position: relative;
+    z-index: -1;
+ }
+.nav{
+    display: flex;
+    list-style-type: none;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+    position:sticky;
+    top: 0;
+    background-color: white;
+    z-index: 300;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+li:hover{
+    color:  rgb(8, 101, 250);
+    text-decoration: 4px underline;
+    
+}
+.logo{
+    color:rgb(112, 2, 21);
+    font-size: 35px;
+    padding-left: 100px;
+    padding-right: 80px;
+    font-weight: bold;
+}
+.abo{
+    color: white;
+    text-align: center; 
+    margin-top: -130px;
+    font-size: 50px;
+}
+
+.item{
+     margin-top: 120px; 
+     margin-left: 100px;     
+}
+.item1{
+    position: absolute;
+    top: 350px;
+    margin-left: 20PX;
+    background-color: white;
+    padding: 0.5rem 0.5rem ;
+    text-align: center;
+}
+.box{
+    margin-left: 100px;
+}
+.item2{
+    margin-top: 40px; 
+    margin-left: 100px;     
+}
+.item3{
+    position: absolute;
+    top: 950px;
+    margin-left: 20PX;
+    background-color: white;
+    padding: 0.5rem 0.5rem ;
+    text-align: center;
+}
+.get{
+    position: absolute;
+    top:60%;
+    left: 68%;
+    line-height: 35px;
+}
+.get h2{
+    padding-bottom: 20px;
+}
+.get a{
+    color: grey;
+    font-size: 20px;
+}

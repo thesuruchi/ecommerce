@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    display: flex;
+    list-style-type: none;
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 19px;
+}
+li:hover{
+    color: rgb(8, 101, 250);
+    text-decoration: 4px underline;
+    
+}
+.logo{
+    color:rgb(112, 2, 21);
+    font-size: 35px;
+    padding-left: 100px;
+    padding-right: 80px;
+    font-weight: bold;
+}
+img{
+    z-index: -1;
+}
+#pro1{
+    margin-left: 150px;
+}
+.navbar{
+    display: flex;
+    list-style-type: none;
+    height: 40px;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+
+
+}
+li:hover{
+    color: rgb(8, 101, 250);
+    text-decoration: 4px underline;
+    
+}
+.portfolio-item{
+    display: flex;
+    color: black;
+    justify-content:space-around;
+    /* gap: 10px; */
+    margin-top: 60px;
+    /* position: absolute; */
+    /* padding: 40px; */
+    /* margin-right: 250px; */
+    flex-wrap: wrap;
+    column-gap: 5px;
+    row-gap: 100px;
+    left: 30px;
+}
+.portfolio-item.contain{
+    margin: 25px;
+}
+.load{
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 670px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+}
+#load{
+    font-size: 10px;
+}
+.load:hover{
+    background-color:  rgb(8, 101, 250);
+    color: white;
+    border: none;
+}
+ footer{
+    height: 280px;
+    width: 100%;
+    background-color: black;
+    margin-top:40px ;
+    color: white;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+ }
+ .white{
+    color: white;
+    font-size: 15px;
+ }
+ .white:hover{
+    text-decoration: 2px underline rgb(8, 101, 250) ;
+ }
+ .item{
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+
+ }
+ .coteg{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+
+ .item1{
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+ }
+ .help{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+ .item2{
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+ }
+ .touch{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+
+ .item3{
+    margin-bottom: 20px;
+    /* font-weight: bold; */
+    font-family: sans-serif;
+ }
+ .news{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+
+
+
+
+
+    
+
+
+
+
+
+
+
