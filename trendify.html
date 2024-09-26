@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="trendifystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -26,6 +26,14 @@
         <li><a href="blog.html">BLOG</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
+
+        <div class="iconbox">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-heart" id="heart"></i>
+            <i class="fa fa-user"></i><p style="margin-left: -30px; margin-top: -2px;">ROHIT</p>
+
+        </div>
 
     </ul>
 
@@ -81,21 +89,21 @@
             <div>
                 <img class="sec2" src="images/fejac2.jpg" alt="image not shown">
             </div>
-            <p>The Roadster Lifesyle Co. Puffer Jacket With Hood (XL) Girls Jacket</p>
+            <a href="product.html?name=The Roadster Lifesyle Co. Puffer Jacket With Hood (XL) Girls Jacket&&images/fejac2.jpg&&price=$79.99&&brand=ROADSTER">The Roadster Lifesyle Co. Puffer Jacket With Hood (XL) Girls Jacket</a>
             <p><b>$79.99</b></p>
         </div>
         <div class="shadow">
             <div>
                 <img class="sec2" src="images/male jac1.jpg" alt="image not shown">
             </div>
-            <p>Leather Biker Jacket Men Long Sleeve Zipper Leather Jackets</p>
+            <a href="owerview.html?name=Leather Biker Jacket Men Long Sleeve Zipper Leather Jackets&&images/male jac1.jpg&&price=$80.100&&brand=THE INDIAN GARAGE CO">Leather Biker Jacket Men Long Sleeve Zipper Leather Jackets</a>
             <p><b>$80.100</b></p>
         </div>
         <div class="shadow">
             <div>
                 <img class="sec2" src="images/shoe1.jpg" alt="image not shown">
             </div>
-            <p>Digitus Crucis Women's Sneakers Stylish Walking Gym Sports Shoe</p>
+            <a href="detail.html?name=Digitus Crucis Women's Sneakers Stylish Walking Gym Sports Shoe&&images/shoe1.jpg&&price=$100.99&&brand=MICHAEL ANGELO ">Digitus Crucis Women's Sneakers Stylish Walking Gym Sports Shoe</a>
             <p><b>$100.99</b></p>
         </div>
     </div>
@@ -158,7 +166,9 @@
                 right: '550px',
 
             }, 4000)
-        })
+
+
+        });
     </script>
 
 

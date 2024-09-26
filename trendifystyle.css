@@ -9,15 +9,20 @@
     height: 90px;
     width: 100%;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     position:sticky;
     top: 0;
     z-index: 300;
 }
+.iconbox{
+    display: flex;
+    gap: 40px;
+    margin-left: 200px;
+}
 a{
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
 }
 li:hover{
     color: rgb(169, 26, 126);
@@ -27,7 +32,7 @@ li:hover{
 .logo{
     color:rgb(112, 2, 21);
     font-size: 35px;
-    padding-left: 100px;
+    padding-left: 70px;
     padding-right: 80px;
     font-weight: bold;
 }
@@ -173,14 +178,16 @@ li:hover{
     height: 500px;
     background: white;
 }
-
-.shadow p{
+.shadow a{
+    display: block;
     width: 320px;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
 }
-
+.shadow a:hover{
+    color: blue;
+}
 .shadow div{
     width: 100%;
     height: 400px;
@@ -189,6 +196,10 @@ li:hover{
 
 .shadow:hover{
     box-shadow: 6px 6px 6px grey;
+}
+#heart:hover{
+    color: red;
+
 }
 .load{
     text-align: center;

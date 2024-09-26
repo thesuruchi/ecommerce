@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detailstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+<body>
+    <ul class="nav">
+        <div class="logo">TRENDIFY</div>
+        <li><a href="trendify.html">HOME</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="">FEATURES</a></li>
+        <li><a href="blog.html">BLOG</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+
+        <div class="iconbox">
+            <i class="fa fa-search"></i>
+            <i class="fa fa-shopping-cart"></i>
+            <i class="fa fa-heart" id="heart"></i>
+            <i class="fa fa-user" ></i>
+            <p style="margin-left:-30px; margin-top: -2px;">ROHIT</p>
+
+        </div>
+    </ul>
+
+    <div class="godfather">
+        <div class="first"><img src="images/shoe1.jpg"></div>
+        <div class="second">
+            <h1 id="brand-display">MICHAEL ANGELO </h1><br>
+            <h3 style="color: grey;" id="name-display">Digitus Crucis Women's Sneakers Stylish Walking Gym Sports Shoe</h3><br>
+            <h2 class="price">$100.99</h2>
+            <h4 style="color: rgb(29, 182, 29);">Inclusive of all taxes</h4><br>
+            <button class="add"><a href="#">Add to Cart</a></button><button class="buy"><a href="#">Buy Now</a></button><br><br>
+            <hr style="width: 590px;">
+
+
+            <div class="son">
+                <h2 style="text-align: center;">PRODUCT DETAILS</h2><br>
+                <h3>PRODUCT DESCRIPTION</h3>
+                <P>A pair of round toe gold-toned sneakers ,has regular styling,<br>
+                    Lace-ups detail <br>
+                    Pu upper <br>
+                    Cushioned footbed <br>
+                    Textured and patterned outsole <br>
+                    Warranty: 7 days <br>
+                    Warranty: Warranty provided by brand/manufacturer. </P>
+                <h3>MATERIAL & CARE</h3>
+                <p>Pu <br>
+                    Wipe with a damp cloth to remove the dust
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 180) {
+                    $('.nav').css('background', 'white');
+                }
+                else {
+                    $('.nav').css('background', 'none');
+                }
+            })
+
+
+                function getData(data) {
+                    const urldata = new URLSearchParams(window.location.search);
+                    return urldata.get(data);
+                }
+                const brand = getData('brand');
+                const name = getData('name');
+                const img = getData('img');
+                const price = getData('price');
+                $('#brand-display').html(brand);
+                $('#name-display').html(name);
+                $('.price').html(price);
+                $('img').attr('src', `${img}`)
+            });
+    </script>
+
+    
+</body>
+</html>

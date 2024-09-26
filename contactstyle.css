@@ -19,15 +19,24 @@
     height: 90px;
     width: 100%;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
     position:sticky;
     top: 0;
     background-color: white;
 }
+.iconbox{
+    display: flex;
+    gap: 40px;
+    margin-left: 200px;
+}
+#heart:hover{
+    color: red;
+
+}
 a{
     color: black;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
 }
 li:hover{
     color:  rgb(8, 101, 250);
@@ -37,7 +46,7 @@ li:hover{
 .logo{
     color:rgb(112, 2, 21);
     font-size: 35px;
-    padding-left: 100px;
+    padding-left: 70px;
     padding-right: 80px;
     font-weight: bold;
 }
@@ -47,3 +56,90 @@ li:hover{
     margin-top: -130px;
     font-size: 50px;
 }
+.get{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 180px;
+    /* line-height: 80px; */
+    margin-left: 250px;
+}
+.get1{
+    margin-top: 180px;
+    /* line-height: 50px; */
+    margin-left: 250px;
+
+}
+.main{
+    display: flex;
+    gap: 30px;
+}
+.sub{
+    background-color: black;
+    color: white;
+    padding: 1rem 2em;
+    border-radius: 30px;
+    margin-top: 150px;
+}
+ footer{
+    height: 280px;
+    width: 100%;
+    background-color: black;
+    /* margin-top:40px ; */
+    color: white;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+ }
+ .white{
+    color: white;
+    font-size: 15px;
+ }
+ .white:hover{
+    text-decoration: 2px underline rgb(8, 101, 250) ;
+ }
+ .item{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+ }
+ .coteg{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ .item1{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    margin-left: 17px;
+ }
+ .help{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ .item2{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    margin-left: 25px;
+
+ }
+ .touch{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+ .item3{
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    margin-left: 25px;
+
+ }
+ .news{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+ }
+
+
+
+
