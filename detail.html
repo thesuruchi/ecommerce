@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product</title>
     <link rel="stylesheet" href="detailstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 <!-- 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
@@ -32,10 +34,58 @@
     </ul>
 
     <div class="godfather">
-        <div class="first"><img src="images/shoe1.jpg"></div>
+        <div class="first">
+            <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="images/leat1.jpg" class="mainpro"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/leat2.jpg" class="pro1"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/leat3.jpg" class="pro2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/leat4.jpg" class="pro3"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/leat5.jpg" class="pro4"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/leat6.jpg"  class="pro5"/>
+                    </div>    
+                </div>
+                <div class="swiper-button-next" style="color: black;"></div>
+                <div class="swiper-button-prev" style="color: black;"></div>
+              </div>
+              <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/leat1.jpg" class="mainpro"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/leat2.jpg" class="pro1" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/leat3.jpg" class="pro2" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/leat4.jpg" class="pro3"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/leat5.jpg" class="pro4"/>
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/leat6.jpg" class="pro5" />
+                  </div>
+                </div>
+              </div>
+            
+        </div>
         <div class="second">
-            <h1 id="brand-display">MICHAEL ANGELO </h1><br>
-            <h3 style="color: grey;" id="name-display">Digitus Crucis Women's Sneakers Stylish Walking Gym Sports Shoe</h3><br>
+            <h1 id="brand-display">INDIAN GARAGE CO </h1><br>
+            <h3 style="color: grey;" id="name-display">Leather Biker Jacket Men Long Sleeve Zipper Leather Jackets</h3><br>
             <h2 class="price">$100.99</h2>
             <h4 style="color: rgb(29, 182, 29);">Inclusive of all taxes</h4><br>
             <button class="add"><a href="#">Add to Cart</a></button><button class="buy"><a href="#">Buy Now</a></button><br><br>
@@ -45,40 +95,40 @@
             <div class="son">
                 <h2 style="text-align: center;">PRODUCT DETAILS</h2><br>
                 <h3>PRODUCT DESCRIPTION</h3>
-                <P>A pair of round toe gold-toned sneakers ,has regular styling,<br>
-                    Lace-ups detail <br>
-                    Pu upper <br>
-                    Cushioned footbed <br>
-                    Textured and patterned outsole <br>
-                    Warranty: 7 days <br>
-                    Warranty: Warranty provided by brand/manufacturer. </P>
-
-                    <h3>SIZE & FIT</h3>
-                    <P>Size Available (6,7,8,9,10)</P>
-
+                <P>Brown solid biker jacket, has a stand collar, 4 pockets, zip closure,<br> long sleeves, straight hem, and
+                    unlined. </P>
+                <h3>SIZE & FIT</h3>
+                <P>The model (height 6') is wearing a size M</P>
                 <h3>MATERIAL & CARE</h3>
-                <p>Pu <br>
-                    Wipe with a damp cloth to remove the dust
-                    
-                    </p>
+                <p>Leather<br>
+                    Machine Wash</p>
             </div>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
 
+var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+
+
         $(document).ready(function () {
-
-
-            // $(window).on('scroll', function () {
-            //     if ($(this).scrollTop() > 10) {
-            //         $('.nav').css('background', 'white');
-            //     }
-            //     else {
-            //         $('.nav').css('background', 'none');
-            //     }
-            // })
-
 
                 function getData(data) {
                     const urldata = new URLSearchParams(window.location.search);
@@ -86,12 +136,23 @@
                 }
                 const brand = getData('brand');
                 const name = getData('name');
-                const img = getData('img');
                 const price = getData('price');
+                const pro = getData('mainpro');
+                const pro1 = getData('pro1');
+                const pro2 = getData('pro2');
+                const pro3 = getData('pro3');
+                const pro4 = getData('pro4');
+                const pro5 = getData('pro5');
+
                 $('#brand-display').html(brand);
                 $('#name-display').html(name);
                 $('.price').html(price);
-                $('img').attr('src', `${img}`)
+                $('.mainpro').attr('src', `${img}`);
+                $('.pro1').attr('src', `${pro1}`);
+                $('.pro2').attr('src', `${pro2}`);
+                $('.pro3').attr('src', `${pro3}`);
+                $('.pro4').attr('src', `${pro4}`);
+                $('.pro5').attr('src', `${pro5}`);
             });
     </script>
 

@@ -7,6 +7,10 @@
     <title>contact</title>
     <link rel="stylesheet" href="contactstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -38,8 +42,8 @@
     <div class="main">
     <div class="get"><h1 style="margin-left: 150px;">Send Us a Message</h1>
 
-        <p>Your Email Address</p>
-        <p>How can We Help?</p>
+        <p>Your Email Address</p><input type="text" placeholder="Enter your Email" class="inp">
+        <p>How can We Help?</p><textarea name="Message" class="inp2" placeholder="Enter your Query....."></textarea>
         <button class="sub">SUBMIT</button>
     </div>
 
@@ -101,6 +105,30 @@
     </div>
 </footer>
 
+
+<script>
+    $(document).ready(function(){
+        $('.sub').click(function(){
+            if(input==''&&textarea==''){
+                swal({
+                title:"error",
+                icon:"error",
+                timer: 5000,
+              })
+            }
+            
+           else{
+            swal({
+                title:"Submission Successfull",
+                icon:"success",
+                timer: 5000,
+              })
+            
+
+           }
+        })
+    })
+</script>
 </body>
 </html>
 

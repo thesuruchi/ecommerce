@@ -139,6 +139,13 @@ li:hover{
     flex-direction: column;
     gap: 15px;
  }
+ .inp{
+    padding: 10px;
+ }
+ .inp2{
+    padding: 25px;
+
+ }
 
 
 

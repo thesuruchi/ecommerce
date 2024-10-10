@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product</title>
     <link rel="stylesheet" href="productstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<!-- 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script> -->
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
 </head>
 
@@ -35,7 +37,72 @@
     </ul>
 
     <div class="godfather">
-        <div class="first"><img src="images/fejac2.jpg"></div>
+        <div class="first">
+            <!-- Swiper -->
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="/images/demo1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/demo2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/demo3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/demo4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/demo5.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="/images/demo6.jpg" alt=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div> -->
+
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img src="" class="main_img" />
+          </div>
+      <div class="swiper-slide">
+        <img src=""  class="img1"/>
+      </div>
+      <div class="swiper-slide">
+        <img src=""class="img2" />
+      </div>
+      <div class="swiper-slide">
+        <img src="" class="img3"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="" class="img4"/>
+      </div>
+      <div class="swiper-slide">
+        <img src=""class="img5" />
+      </div>
+      
+    </div>
+    <div class="swiper-button-next" style="color: black;"></div>
+    <div class="swiper-button-prev" style="color: black;"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="" class="main_img"/>
+      </div>
+      <div class="swiper-slide">
+        <img src="" class="img1" />
+      </div>
+      <div class="swiper-slide">
+        <img src="" class="img2"/>
+      </div>
+      <div class="swiper-slide">
+        <img src=""class="img3"/>
+      </div>
+      <div class="swiper-slide">
+        <img src=""class="img4" />
+      </div>
+      <div class="swiper-slide">
+        <img src=""class="img5" />
+      </div>
+    </div>
+  </div>
+
+        </div>
+
+    
         <div class="second">
             <h1 id="brand-display">ROADSTER</h1><br>
             <h3 style="color: grey;" id="name-display">The Roadster Lifesyle Co. Puffer Jacket With Hood (XL) Girls Jacket</h3><br>
@@ -48,7 +115,7 @@
             <div class="son">
                 <h2 style="text-align: center;">PRODUCT DETAILS</h2><br>
                 <h3>PRODUCT DESCRIPTION</h3>
-                <P>Black solid padded jacket with zip detail, has a mock collar, 2 pockets ,has a zip closure,<br> long sleeves, straight hemline, polyester lining. </P>
+                <P> Skyblue padded jacket with zip detail, has a mock collar, 2 pockets ,has a zip closure,<br> long sleeves, straight hemline, polyester lining. </P>
                 <h3>SIZE & FIT</h3>
                 <P>The model (height 5'8) is wearing a size S</P>
                 <h3>MATERIAL & CARE</h3>
@@ -58,7 +125,26 @@
         </div>
     </div>
 
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  
     <script>
+       var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
 
         $(document).ready(function () {
 
@@ -69,12 +155,26 @@
                 }
                 const brand = getData('brand');
                 const name = getData('name');
-                const img = getData('img');
                 const price = getData('price');
+                const img = getData('main_img');
+                const img1 = getData('img1');
+                const img2 = getData('img2');
+                const img3 = getData('img3');
+                const img4 = getData('img4');
+                const img5 = getData('img5');
+
                 $('#brand-display').html(brand);
                 $('#name-display').html(name);
+                $('.main_img').attr('src', `${img}`);
+                $('.img1').attr('src', `${img1}`);
+                $('.img2').attr('src', `${img2}`);
+                $('.img3').attr('src', `${img3}`);
+                $('.img4').attr('src', `${img4}`);
+                $('.img5').attr('src', `${img5}`);
                 $('.price').html(price);
-                $('img').attr('src', `${img}`)
+
+
+
             });
     </script>
 
