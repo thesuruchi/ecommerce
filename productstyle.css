@@ -59,37 +59,24 @@ li:hover{
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 600px;
     margin-top: 30px;
 }
 .son p{
     font-size: 17px;
     color: grey;
 }
-.add{
-    background-color: salmon;
-    color: white;
-    font-size: 19px;
-    padding: 1rem 6rem;
-    border: none;
-}
-.add a{
-    color: white;
-}
-.add:hover a{
-    color: salmon;
-}
-.add:hover{
-    background: none;
-    border: 2px solid salmon;
-    /* color: salmon; */
-}
+
 .buy{
-    background-color: skyblue;
+    background-color: rgb(135, 135, 251);
     color: white;
+    border-radius: 10px;
     font-size: 19px;
     padding: 1rem 6rem;
     border: none;
-    margin-left: 40px;
+    display: block;
+    margin: auto;
+
 }
 .buy a{
     color: white;
@@ -102,28 +89,6 @@ li:hover{
     border: 2px solid skyblue;
     color: skyblue;
 }
-
-/* .swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  } */
-
   .swiper {
     width: 100%;
     height: 100%;
