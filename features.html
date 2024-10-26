@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link rel="stylesheet" href="aboutstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <title>Features</title>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <!-- Isotope -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="featuresstyle.css">
 </head>
-
 <body>
 
+    <!-- header -->
     <ul class="nav">
         <div class="logo">TRENDIFY</div>
         <li><a href="trendify.html">HOME</a></li>
@@ -20,19 +29,63 @@
         <li><a href="blog.html">BLOG</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="contact.html">CONTACT</a></li>
-        
         <div class="iconbox">
-            <i class="fa fa-search"></i>
-            <i class="fa fa-shopping-cart"></i>
-            <i class="fa fa-heart" id="heart"></i>
-            <i class="fa fa-user"></i><p style="margin-left: -30px;  margin-top: -2px;">ROHIT</p>
-
+            <i class="fa fa-search" id="icon"></i>
+            <i class=" fa fa-shopping-cart"></i>
+            <i class=" fa fa-heart"id="heart"></i>
+            <i class="fa fa-user"></i><p style="margin-left: -30px; color: black;"> ROHIT </p>
         </div>
-
+    
 
     </ul>
+    <!-- shoppingcart -->
+    <form class="bg0 p-t-75 p-b-85"></form>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-12 m-lr-auto m-b-50">
+                    <div class="m-l-25 m-r--38 m-lr-0-xl">
+                        <div class="wrap-table-shopping-cart">
+                            <table class="table-shopping-cart" id="cart-table">
+                                <thead>
+                                    <tr class="table_head">
+                                        <th class="column-1">Product</th>
+                                        <th class="column-2">Product name</th>
+                                        <th class="column-3">Price</th>
+                                        <th class="column-4">Quantity</th>
+                                        <th class="column-5">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-items">
+                                    <!-- Cart items will be dynamically inserted here -->
+                                </tbody>
+                            </table>
+                        </div>
 
-    <button class="load"><a href="trendify.html" id="load">LOAD MORE.....</a></button>
+                        <div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm"id="man">
+                            <div class="flex-w flex-m m-r-20 m-tb-5 " >
+                                <input class="stext-104 cl2 plh4 size-117 bor13 p-lr-10 m-r-10 m-tb-5" type="text"
+                                    id="coupon-code" placeholder="Coupon Code">
+
+                                <div class="flex-c-m">
+                                    <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" id="apply-coupon">
+                                        Apply Coupon
+                                    </button>
+                                </div>
+                            </div>
+
+                            <a href="checkout.html"><div class="flex-c-m"></div>
+                                <button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer" id="checkout">
+                                    Proceed to Checkout
+                                </button>
+                            </div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- footer -->
     <footer>
         <div class="coteg">
             <div class="item">
@@ -60,8 +113,14 @@
             </div>
             <p>Any questions? Let us know in store at 8th<br>floor,379 Hudson st,Newyork,NY 10018 or <br> call us
                 on(+1)96 716 6879</p>
+                <div class="social-icons">  
+                    <i class='bx bxl-facebook-circle'></i>
+                    <i class='bx bxl-instagram-alt' ></i>
+                <i class='bx bxl-pinterest' ></i>
+                   </div>
 
         </div>
+        
 
         <div class="news">
             <div class="item3">
@@ -73,10 +132,100 @@
                     href="trendify.html" class="white">SUBSCRIBE</a></button>
 
         </div>
+    </footer>
 
+    
+     <!-- jQuery Script -->
+    <!-- <script src="jquary/inder.js"></script> -->
+    <script>
+        $(document).ready(function() {
+    // Sample data for cart items, in a real scenario, this would be fetched from the server
+    const cartItems = [
+        {
+            productImg: 'item-cart-01.jpg',
+            productName: 'Espritto Slim Fit white shirt',
+            productPrice: 950,
+            quantity: 1
+        },
+        {
+            productImg: 'item-cart-02.jpg',
+            productName: 'Court vision trendy black sneakers',
+            productPrice: 1200,
+            quantity: 1
+        },
+        {
+            productImg: 'item-cart-03.jpg',
+            productName: 'Fastrack brown strap watch',
+            productPrice: 1150,
+            quantity: 1
+        },
+        {
+            productImg: 'item-cart-04.jpg',
+            productName: 'Red stylish fur jackets',
+            productPrice: 1599,
+            quantity: 1
+        },
+        {
+            productImg: 'item-cart-05.jpg',
+            productName: 'Black formal wear shirt for men',
+            productPrice: 870,
+            quantity: 1
+        },
+        // Add more items as needed
+    ];
 
+    // Function to render cart items
+    function renderCartItems() {
+        let html = '';
+        cartItems.forEach(item => {
+            html += `
+                <tr class="table_row">
+                    <td class="column-1">
+                        <div class="how-itemcart1">
+                            <img src="images/${item.productImg}" alt="IMG">
+                        </div>
+                    </td>
+                    <td class="column-2 text-truncate p-r-11" style="max-width: 150px;">${item.productName}</td>
+                    <td class="column-3">₹ ${item.productPrice}</td>
+                    <td class="column-4">
+                        <div class="wrap-num-product flex-w m-l-auto m-r-0">
+                            <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                <i class="fs-16 zmdi zmdi-minus"></i>
+                            </div>
+                            <input class="mtext-104 cl3 txt-center num-product" type="number"
+                                name="num-product1" value="${item.quantity}">
+                            <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                <i class="fs-16 zmdi zmdi-plus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="column-5">₹ ${item.productPrice * item.quantity}</td>
+                </tr>
+            `;
+        });
+        $('#cart-items').html(html);
+    }
 
+    // Render the cart items on page load
+    renderCartItems();
+
+    // Apply coupon button click event
+    $('#apply-coupon').click(function() {
+        let couponCode = $('#coupon-code').val();
+        if (couponCode) {
+            // Handle coupon application (e.g., validate and apply discount)
+            alert(`Coupon ${couponCode} applied!`);
+        } else {
+            alert('Please enter a coupon code.');
+        }
+    });
+
+    // Proceed to checkout button click event
+    $('#checkout').click(function() {
+        // Handle checkout logic
+        alert('Proceeding to checkout...');
+    });
+});
+    </script>
 </body>
-
 </html>
-

@@ -8,10 +8,12 @@
   <link rel="stylesheet" href="productstyle.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 </head>
 
@@ -21,7 +23,7 @@
     <div class="logo">TRENDIFY</div>
     <li><a href="trendify.html">HOME</a></li>
     <li><a href="shop.html">SHOP</a></li>
-    <li><a href="">FEATURES</a></li>
+    <li><a href="features.html">FEATURES</a></li>
     <li><a href="blog.html">BLOG</a></li>
     <li><a href="about.html">ABOUT</a></li>
     <li><a href="contact.html">CONTACT</a></li>
@@ -109,8 +111,8 @@
       </h3><br>
       <h2 class="price">$79.99</h2>
       <h4 style="color: rgb(29, 182, 29);">Inclusive of all taxes</h4><br>
-      <button class="buy"><a href="#">Buy
-          Now  <i class="fa fa-shopping-cart"></i></a></button><br><br>
+      <button class="buy" id="rzp-button1">Buy
+          Now  <i class="fa fa-shopping-cart"></i></button><br><br>
       <hr style="width: 590px;">
 
 
@@ -200,6 +202,37 @@
 
       $('.size').html(size);
       $('.mat').html(mat);
+
+
+// let prc = document.getElementById('xyz').value;
+var options = {
+    "key": "rzp_test_kBREEooxYkKLPo", // Enter the Key ID generated from the Dashboard
+    "amount": "90000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+    "currency": "INR",
+    "name": "Acme Corp", //your business name
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logo",
+    "handle": function(response){
+        alert('Payment Successfull');
+    },
+    "prefill": { //We recommend using the prefill parameter to auto-fill customer's contact information especially their phone number
+        "name": "Gaurav Kumar", //your customer's name
+        "email": "gaurav.kumar@example.com",
+        "contact": "9000090000" //Provide the customer's phone number for better conversion rates 
+    },
+    "notes": {
+        "address": "Razorpay Corporate Office"
+    },
+    "theme": {
+        "color": "#3399cc"
+    }
+};
+var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+
 
 
 

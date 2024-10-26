@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        <!-- Isotope -->
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <!-- SweetAlert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- Icon -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+        <!-- CSS for layout and styling -->
+   
+        <link rel="stylesheet" href="checkoutstyle.css">
+</head>
+<body>
+  <!-- header -->
+  <ul class="nav">
+    <div class="logo">TRENDIFY</div>
+    <li><a href="trendify.html">HOME</a></li>
+    <li><a href="shop.html">SHOP</a></li>
+    <li><a href="features.html">FEATURES</a></li>
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="contact.html">CONTACT</a></li>
+    <div class="iconbox">
+        <i class="fa fa-search" id="icon"></i>
+        <i class=" fa fa-shopping-cart"></i>
+        <i class=" fa fa-heart"id="heart"></i>
+        <i class="fa fa-user"></i><p style="margin-left: -30px;"> ROHIT </p>
+    </div>
+
+
+</ul>
+</div>
+
+    <div class="container">
+        <div class="grid sm:px-10 lg:grid-cols-2 lg:px-20 xl:px-32">
+            <div class="px-4 pt-8">
+                <p class="text-xl font-medium">Order Summary</p>
+                <p style="color: green;">Check your items. And select a suitable shipping method.</p>
+                <div class="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
+                    <div class="flex flex-col rounded-lg bg-white sm:flex-row">
+                        <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="images/shoe1.jpg" alt="" />
+                        <div class="flex w-full flex-col px-4 py-4">
+                            <span class="font-semibold">Digitus Crucis Women's Sneakers Stylish Sports Shoe</span>
+                            <p class="text-lg font-bold">$138.99</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col rounded-lg bg-white sm:flex-row">
+                        <img class="m-2 h-24 w-28 rounded-md border object-cover object-center" src="images/male jac1.jpg" alt="" />
+                        <div class="flex w-full flex-col px-4 py-4">
+                            <span class="font-semibold">Trendy Black Leather jacket for men</span>
+                            <p class="mt-auto text-lg font-bold">$238.99</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <p class="mt-8 text-lg font-medium">Shipping Methods</p>
+                <form class="mt-5 grid gap-6">
+                    <div class="relative">
+                        <input class="peer hidden" id="radio_1" type="radio" name="radio" checked />
+                        <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                        <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_1">
+                            <i class='bx bx-truck w-14'></i>
+                            <div class="ml-5">
+                                <span class="mt-2 font-semibold">Shadow-fax Delivery</span>
+                                <p class="text-slate-500 text-sm leading-6">Delivery: Within 2-3 Days</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="relative">
+                        <input class="peer hidden" id="radio_2" type="radio" name="radio" />
+                        <span class="peer-checked:border-gray-700 absolute right-4 top-1/2 block h-3 w-3 -translate-y-1/2 rounded-full border-8 border-gray-300 bg-white"></span>
+                        <label class="peer-checked:border-2 peer-checked:border-gray-700 peer-checked:bg-gray-50 flex cursor-pointer select-none rounded-lg border border-gray-300 p-4" for="radio_2">
+                            <i class='bx bx-plane w-14'></i>
+                            <div class="ml-5">
+                                <span class="mt-2 font-semibold">E-cart Delivery</span>
+                                <p class="text-slate-500 text-sm leading-6">Delivery: Within a Day</p>
+                            </div>
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="mt-10 bg-gray-50 px-4 pt-8 lg:mt-0">
+                <p class="text-xl font-medium">Payment Details</p>
+                <p style="color: red;">Complete your order by providing your payment details.</p>
+                <div class="">
+                    <label for="email" class="mt-4 mb-2 block text-sm font-medium">Email</label>
+                    <div class="relative">
+                        <input type="text" id="email" name="email" class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="example@gmail.com" />
+                        <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                            <i class='bx bx-envelope' style="color: green;"></i>
+                        </div>
+                    </div>
+                    <label for="card-holder" class="mt-4 mb-2 block text-sm font-medium">Card Holder</label>
+                    <div class="relative">
+                        <input type="text" id="card-holder" name="card-holder" class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm uppercase shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Your full name here" />
+                        <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                            <i class='bx bx-user' style="color: green;"></i>
+                        </div>
+                    </div>
+                    <label for="card-no" class="mt-4 mb-2 block text-sm font-medium">Card Details</label>
+                    <div class="flex">
+                        <div class="relative w-7/12 flex-shrink-0">
+                            <input type="text" id="card-no" name="card-no" class="w-full rounded-md border border-gray-200 px-2 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="xxxx-xxxx-xxxx-xxxx" />
+                            <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                                <i class='bx bx-credit-card ' style="color: green;"></i>
+                            </div>
+                        </div>
+                        <input type="text" name="credit-expiry" class="w-full rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="MM/YY" />
+                        <input type="text" name="credit-cvc" class="w-1/6 flex-shrink-0 rounded-md border border-gray-200 px-2 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="CVC" />
+                    </div>
+                    <label for="billing-address" class="mt-4 mb-2 block text-sm font-medium">Billing Address</label>
+                    <div class="flex flex-col sm:flex-row">
+                        <div class="relative flex-shrink-0 sm:w-7/12">
+                            <input type="text" id="billing-address" name="billing-address" class="w-full rounded-md border border-gray-200 px-4 py-3 pl-11 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="Enter your Home,Street,etc Address" />
+                            <div class="pointer-events-none absolute inset-y-0 left-0 inline-flex items-center px-3">
+                                <i class='bx bx-home' style="color: green;"></i>
+                            </div>
+                        </div>
+                        <select name="billing-state" class="w-full rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none focus:z-10 focus:border-blue-500 focus:ring-blue-500">
+                            <option value="">State</option>
+                        </select>
+                        <input type="text" name="billing-zip" class="flex-shrink-0 rounded-md border border-gray-200 px-4 py-3 text-sm shadow-sm outline-none sm:w-1/6 focus:z-10 focus:border-blue-500 focus:ring-blue-500" placeholder="ZIP" />
+                    </div>
+    
+                    <!-- Total -->
+                    <div class="mt-6 border-t border-b py-2" style="line-height: 25px;">
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-900">Subtotal</p>
+                            <p class="font-semibold text-gray-900">$20.00</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-sm font-medium text-gray-900">Shipping</p>
+                            <p class="font-semibold text-gray-900">$54.430</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex items-center justify-between">
+                        <p class="text-sm font-medium text-gray-900">Total</p>
+                        <p class="text-2xl font-semibold text-gray-900">$325.00</p>
+                    </div>
+                </div>
+                <button class="mt-4 mb-8 w-full rounded-md bg-grey-900 px-6 py-3 font-medium text-white" id="oer">Place Order</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- footer -->
+        <footer>
+            <div class="coteg">
+                <div class="item">
+                    <h4>CATEGORIES</h4>
+                </div>
+                <p><a href="trendify.html" class="white">WOMEN</a></p>
+                <p><a href="trendify.html" class="white">MEN</a></p>
+                <p><a href="trendify.html" class="white">SHOES</a></p>
+                <p><a href="trendify.html" class="white">BAGS</a></p>
+            </div>
+    
+            <div class="help">
+                <div class="item1">
+                    <h4>HELP</h4>
+                </div>
+                <p><a href="trendify.html" class="white">Track Order</a></p>
+                <p><a href="trendify.html" class="white">Returns</a></p>
+                <p><a href="trendify.html" class="white">Shipping</a></p>
+                <p><a href="trendify.html" class="white">FAQs</a></p>
+            </div>
+    
+            <div class="touch">
+                <div class="item2">
+                    <h4>GET IN TOUCH</h4>
+                </div>
+                <p>Any questions? Let us know in store at 8th<br>floor,379 Hudson st,Newyork,NY 10018 or <br> call us
+                    on(+1)96 716 6879</p>
+                    <div class="social-icons">  
+                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-instagram-alt' ></i>
+                    <i class='bx bxl-pinterest' ></i>
+                       </div>
+    
+            </div>
+            
+    
+            <div class="news">
+                <div class="item3">
+                    <h4>NEWS LETTER</h4>
+                </div>
+                <p>trendify@gmail.com</p>
+                <button
+                    style="background-color: rgb(8, 101, 250); padding: 1rem 3rem; color: white; border-radius: 20px; border: none;"><a
+                        href="trendify.html" class="white">SUBSCRIBE</a></button>
+    
+            </div>
+        </footer>
+    
+        
+        <!-- jQuery Script -->
+        <script src="jquary/inder.js"></script>
+</body>
+</html>
