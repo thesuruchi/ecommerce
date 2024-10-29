@@ -82,12 +82,12 @@ li:hover{
     color: white;
 }
 .buy:hover a{
-    color: skyblue;
+    color:  rgb(135, 135, 251);
 }
 .buy:hover{
     background: none;
-    border: 2px solid skyblue;
-    color: skyblue;
+    border: 2px solid  rgb(135, 135, 251);
+    color:  rgb(135, 135, 251);
 }
   .swiper {
     width: 100%;
